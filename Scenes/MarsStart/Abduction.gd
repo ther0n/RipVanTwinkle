@@ -23,7 +23,7 @@ func _on_rock_found():
 	timer.start(3) #to start
 
 func _on_abducted():
-	get_tree().change_scene(Utils.AbductionCutscene)
+	PlayerState.next_scene()
 
 func _on_LeaveArea_body_entered(body):
 	if ready:

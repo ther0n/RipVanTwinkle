@@ -144,7 +144,7 @@ func checkWin():
 	elif PlayerState.state["wonTicTacToe"]:
 		Utils.showDialog("You won!", "You defeated the alien in TicTacToe!")
 		yield(get_node("/root/Utils/Dialog/CanvasLayer/PopupDialog/MarginContainer/VBoxContainer/Button"), "pressed")
-		get_tree().change_scene(Utils.TempEnd)
+		PlayerState.next_scene()
 		
 	
 func onTicTacBtnPressed( button ):

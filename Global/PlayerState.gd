@@ -4,7 +4,26 @@ var state: Dictionary
 var in_menu: bool = false
 onready var playerScene: PackedScene = preload("res://Scenes/Player.tscn")
 var player: Node2D
-var positions: Dictionary
+var positions: Dictionary = {}
+var scenes: Array = []
+var currentScene: int = -1
+
+func _ready():
+	# 0
+	scenes.append("res://Scenes/Cutscenes/Intro.tscn")
+	# 1
+	scenes.append("res://Scenes/MarsStart/Mars.tscn")
+	# 2
+	scenes.append("res://Scenes/Cutscenes/Abduction.tscn")
+	# 3
+	scenes.append("res://Scenes/AlienShip/AlienShip.tscn")
+	# 4
+	scenes.append("res://Scenes/TicTacToe/TicTacToe.tscn")
+	# 5
+	scenes.append("res://Scenes/Cutscenes/Return.tscn")
+	# 6
+	scenes.append("res://Scenes/Cutscenes/TempEnd.tscn")
+
 
 func add_player() -> void:
 	player = playerScene.instance()
@@ -20,3 +39,7 @@ func get_position(sceneName: String) -> Vector2:
 		
 func update_position(sceneName: String, position: Vector2) -> void:
 	positions[sceneName] = position
+
+func next_scene():
+	currentScene += 1
+	get_tree().change_scene(scenes[currentScene])

@@ -1,6 +1,14 @@
 Backstory
-It's the 22nd century. Despite the danger of doing so, Mars has been colonized by humans.
-Few are willing risk the journey to Mars. Some come hoping to profit from the valuable resources recently discovered on the planet. Others are disgusted by what society on Earth has become and hope to escape.
-Unfortunately for them, Earth provides much of the resources the colonists need. A colonist living on Mars has no choice but to send resources back to Earth in exchange for resources needed for survival.
-There have been mysterious dissappearances of some living on the planet. It's rumored aliens are to blame and as a result it has become normal to carry a weapon when exploring the surface for resources.
-Rip Van Twinkle has just settled down in a new life on Mars. He is just preparing to go hunting for a site to mine resources. Knowing the rumors of aliens, he wants to arm himself before beginning his hunt...
+It's the 22nd century. 
+Despite the danger of doing so, Mars has been colonized by humans.
+Few are willing risk the journey to Mars. 
+Some come hoping to profit from the valuable resources recently discovered on the planet.
+Others are disgusted by what society on Earth has become and hope to escape.
+Unfortunately for them, Earth provides much of the resources the colonists need. 
+Anyone living on Mars has no choice but to do what Earth demands, else risk losing 
+Many colonists have mysteriously disappeared when exploring the planet. 
+It's rumored aliens are to blame.
+Thanks to the disappearances, it has become normal to carry a weapon when exploring the surface for resources.
+Rip Van Twinkle has just settled down in a new life on Mars.
+He is just preparing to go hunting for a site to mine resources. 
+After hearing about the recent disappearances, he decides to arm himself before beginning his resource hunt...

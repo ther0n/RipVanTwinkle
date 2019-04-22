@@ -1,12 +1,15 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Scenes/AlienShip/AlienShip.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Indoors.tres" type="TileSet" id=2]
-[ext_resource path="res://Assets/Alien.png" type="Texture" id=3]
-[ext_resource path="res://Assets/TicTacToe.png" type="Texture" id=4]
+[ext_resource path="res://Scenes/AlienShip/Alien.gd" type="Script" id=3]
+[ext_resource path="res://Assets/Alien.png" type="Texture" id=4]
+[ext_resource path="res://Assets/TicTacToe.png" type="Texture" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 8, 14.7342 )
+extents = Vector2( 9.53671, 24 )
+
+[sub_resource type="RectangleShape2D" id=2]
 
 [node name="AlienShip" type="Node2D"]
 script = ExtResource( 1 )
@@ -19,24 +22,30 @@ format = 1
 tile_data = PoolIntArray( -327683, -1610612734, 0, -327682, -1610612736, 0, -327681, -1610612736, 0, -393216, -1610612736, 0, -393215, -1610612736, 0, -393214, 1610612738, 0, -262148, -1610612734, 0, -262147, -1610612730, 0, -262146, 1, 0, -262145, 1, 0, -327680, 1, 0, -327679, 1, 0, -327678, 1610612742, 0, -327677, 1610612738, 0, -196613, -1610612734, 0, -196612, -1610612730, 0, -196611, 1, 0, -196610, 1, 0, -196609, 1, 0, -262144, 1, 0, -262143, 1, 0, -262142, 1, 0, -262141, 1610612742, 0, -262140, 1610612738, 0, -131078, -1610612734, 0, -131077, -1610612730, 0, -131076, 1, 0, -131075, 1, 0, -131074, 1, 0, -131073, 1, 0, -196608, 1, 0, -196607, 1, 0, -196606, 1, 0, -196605, 1, 0, -196604, 1610612742, 0, -196603, 1610612738, 0, -65542, 0, 0, -65541, 1, 0, -65540, 1, 0, -65539, 1, 0, -65538, 1, 0, -65537, 1, 0, -131072, 1, 0, -131071, 1, 0, -131070, 1, 0, -131069, 1, 0, -131068, 1, 0, -131067, 1610612736, 0, -6, 0, 0, -5, 1, 0, -4, 1, 0, -3, 1, 0, -2, 1, 0, -1, 536870915, 0, -65536, 3, 0, -65535, 1, 0, -65534, 1, 0, -65533, 1, 0, -65532, 1, 0, -65531, 1610612736, 0, 65530, 0, 0, 65531, 1, 0, 65532, 1, 0, 65533, 1, 0, 65534, 1, 0, 65535, 1, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1610612736, 0, 131066, 0, 0, 131067, 1, 0, 131068, 1, 0, 131069, 1, 0, 131070, 1, 0, 131071, 1, 0, 65536, 1, 0, 65537, 1, 0, 65538, 1, 0, 65539, 1, 0, 65540, 1, 0, 65541, 1610612736, 0, 196602, 2, 0, 196603, 6, 0, 196604, 1, 0, 196605, 1, 0, 196606, 1, 0, 196607, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, -1073741818, 0, 131077, -1073741822, 0, 262139, 2, 0, 262140, 6, 0, 262141, 1, 0, 262142, 1, 0, 262143, 1, 0, 196608, 1, 0, 196609, 1, 0, 196610, 1, 0, 196611, -1073741818, 0, 196612, -1073741822, 0, 327676, 2, 0, 327677, 6, 0, 327678, 1, 0, 327679, 1, 0, 262144, 1, 0, 262145, 1, 0, 262146, -1073741818, 0, 262147, -1073741822, 0, 393213, 2, 0, 393214, -1073741824, 0, 393215, -1073741824, 0, 327680, -1073741824, 0, 327681, -1073741824, 0, 327682, -1073741822, 0 )
 
 [node name="Alien" type="Node2D" parent="."]
-editor/display_folded = true
 position = Vector2( 0, -24 )
+script = ExtResource( 3 )
 
 [node name="Sprite" type="Sprite" parent="Alien"]
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 16, 16 )
 
 [node name="Area2D" type="Area2D" parent="Alien"]
 editor/display_folded = true
-position = Vector2( 0, 24 )
+position = Vector2( 0, 27.4982 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Alien/Area2D"]
-position = Vector2( 0.463295, -16 )
+position = Vector2( 0.463295, -19.4982 )
 shape = SubResource( 1 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Alien"]
+editor/display_folded = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Alien/StaticBody2D"]
+shape = SubResource( 2 )
 
 [node name="TicTacToe" type="Sprite" parent="."]
 position = Vector2( 0, -8 )
 scale = Vector2( 0.5, 0.5 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 

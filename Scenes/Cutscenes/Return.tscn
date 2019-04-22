@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scenes/Cutscenes/Return.gd" type="Script" id=1]
+[ext_resource path="res://Assets/blackhole.jpg" type="Texture" id=2]
+[ext_resource path="res://Assets/UFO.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Flyby"
+length = 5.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("UFO:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 388.064, -0.25, 0, 0.168408, -27.564, 235.413, -0.3, 60.0867, 0.3, -39.9133, 151.455, -0.31, 28.0446, 0.32, -34.9554, 89.7012, -0.25, 0, 0.25, 0, 185.455, -0.22, -26.9549, 0.31, 36.0451, 302.025, -0.17, -22.5245, 0.3, 40.4755 ),
+"times": PoolRealArray( 0.00159214, 1, 2, 3, 4, 5 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath("UFO:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 136.187, -0.132639, 21.1912, 0.248408, -39.6872, 73.7391, -0.233309, 8.98156, 0.24, -9.23914, 63.3311, -0.241628, -6.41554, 0.27, 7.16885, 113.29, -0.194216, -15.7417, 0.2, 16.2104, 212.513, -0.161971, -19.0435, 0.17, 19.9875, 291.613, -0.211958, -13.2566, 0.27, 16.8867 ),
+"times": PoolRealArray( 0.00159214, 1, 2, 3, 4, 5 )
+}
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 320.0
+margin_bottom = 240.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 154.404, 125.284 )
+scale = Vector2( 0.277642, 0.243591 )
+texture = ExtResource( 2 )
+
+[node name="UFO" type="Sprite" parent="."]
+position = Vector2( 388.064, 136.187 )
+texture = ExtResource( 3 )
+
+[node name="Animation" type="AnimationPlayer" parent="."]
+anims/Flyby = SubResource( 1 )
+
+[connection signal="animation_finished" from="Animation" to="." method="_on_Animation_animation_finished"]
