@@ -1,0 +1,93 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/TicTacToe/TicTacToe.gd" type="Script" id=1]
+[ext_resource path="res://Assets/TicTacToeBoard.png" type="Texture" id=2]
+[ext_resource path="res://Scenes/TicTacToe/TicTacButton.tscn" type="PackedScene" id=3]
+
+[node name="Main" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 320.0
+margin_bottom = 240.0
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="TicTacButton1" parent="." instance=ExtResource( 3 )]
+margin_left = 40.0
+margin_top = 8.0
+margin_right = 88.0
+margin_bottom = 56.0
+row = 0
+col = 0
+
+[node name="TicTacButton2" parent="." instance=ExtResource( 3 )]
+margin_left = 136.0
+margin_top = 8.0
+margin_right = 184.0
+margin_bottom = 56.0
+row = 0
+col = 1
+
+[node name="TicTacButton3" parent="." instance=ExtResource( 3 )]
+margin_left = 232.0
+margin_top = 8.0
+margin_right = 280.0
+margin_bottom = 56.0
+row = 0
+col = 2
+
+[node name="TicTacButton4" parent="." instance=ExtResource( 3 )]
+margin_left = 40.0
+margin_top = 96.0
+margin_right = 88.0
+margin_bottom = 144.0
+row = 1
+col = 0
+
+[node name="TicTacButton5" parent="." instance=ExtResource( 3 )]
+margin_left = 136.0
+margin_top = 96.0
+margin_right = 184.0
+margin_bottom = 144.0
+row = 1
+col = 1
+
+[node name="TicTacButton6" parent="." instance=ExtResource( 3 )]
+margin_left = 232.0
+margin_top = 96.0
+margin_right = 280.0
+margin_bottom = 144.0
+row = 1
+col = 2
+
+[node name="TicTacButton7" parent="." instance=ExtResource( 3 )]
+margin_left = 40.0
+margin_top = 184.0
+margin_right = 88.0
+margin_bottom = 232.0
+row = 2
+col = 0
+
+[node name="TicTacButton8" parent="." instance=ExtResource( 3 )]
+margin_left = 136.0
+margin_top = 184.0
+margin_right = 184.0
+margin_bottom = 232.0
+row = 2
+col = 1
+
+[node name="TicTacButton9" parent="." instance=ExtResource( 3 )]
+margin_left = 232.0
+margin_top = 184.0
+margin_right = 280.0
+margin_bottom = 232.0
+row = 2
+col = 2
+

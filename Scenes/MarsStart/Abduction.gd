@@ -23,8 +23,8 @@ func _on_rock_found():
 	timer.start(3) #to start
 
 func _on_abducted():
-	get_tree().change_scene("res://Scenes/Abduction/Abduction.tscn")
+	get_tree().change_scene(Utils.AbductionCutscene)
 
 func _on_LeaveArea_body_entered(body):
 	if ready:
-		get_tree().change_scene("res://Scenes/MarsStart/Mars.tscn")
+		get_tree().change_scene(Utils.MarsStart)

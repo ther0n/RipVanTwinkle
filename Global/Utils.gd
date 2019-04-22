@@ -2,6 +2,14 @@ extends Node
 
 onready var dialogScene: PackedScene = preload("res://Scenes/UI/Dialog.tscn")
 
+var MarsStart: String = "res://Scenes/MarsStart/Mars.tscn"
+var ElonsMuskets: String = "res://Scenes/MarsStart/ElonsMuskets.tscn"
+var AbductionArea: String = "res://Scenes/MarsStart/Abduction.tscn"
+var AbductionCutscene: String = "res://Scenes/Cutscenes/Abduction.tscn"
+var AlienShip: String = "res://Scenes/AlienShip/AlienShip.tscn"
+var TicTacToe: String = "res://Scenes/TicTacToe/TicTacToe.tscn"
+var TempEnd: String = "res://Scenes/Cutscenes/TempEnd.tscn"
+
 func _ready() -> void:
 	#OS.set_window_maximized(true)
 	pass
@@ -15,7 +23,7 @@ func showDialog(title: String, text: String) -> NodePath:
 	
 func loadDialog(dialog_file_path: String) -> void:
 	var dialog_path: String = get_tree().get_current_scene().get_name() + "/dialog"
-	var dialog: PoolStringArray
+	var dialog: PoolStringArray = []
 	var dialog_file: File = File.new()
 	dialog_file.open(dialog_file_path, File.READ)
 	while not dialog_file.eof_reached():

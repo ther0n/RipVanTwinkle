@@ -9,4 +9,4 @@ func _ready() -> void:
 
 func _exit_store(body) -> void:
 	if body.get_name() == "Player":
-		get_tree().change_scene("res://Scenes/MarsStart/Mars.tscn")
+		get_tree().change_scene(Utils.MarsStart)

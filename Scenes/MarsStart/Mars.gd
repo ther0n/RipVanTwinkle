@@ -18,9 +18,9 @@ func _on_LeaveArea_body_entered(body):
 			Utils.showDialog("Info", "You should probably pick up a laser musket before venturing out on your own.")
 		else:
 			PlayerState.update_position("MarsStart", PlayerState.player.get_position() + Vector2(8,0))
-			get_tree().change_scene("res://Scenes/MarsStart/Abduction.tscn")
+			get_tree().change_scene(Utils.AbductionArea)
 
 func _gunstore_entered(body) -> void:
 	if body.has_method('get_input'):
 		PlayerState.update_position("MarsStart", PlayerState.player.get_position() + Vector2(0,8))
-		get_tree().change_scene("res://Scenes/MarsStart/ElonsMuskets.tscn")
+		get_tree().change_scene(Utils.ElonsMuskets)

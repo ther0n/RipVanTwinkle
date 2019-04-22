@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Hover.png" type="Texture" id=1]
+[ext_resource path="res://Scenes/TicTacToe/TicTacButton.gd" type="Script" id=2]
+
+[node name="TicTacButton" type="TextureButton"]
+margin_right = 48.0
+margin_bottom = 48.0
+shortcut_in_tooltip = false
+texture_hover = ExtResource( 1 )
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="." to="." method="_on_TicTacButton_pressed"]
