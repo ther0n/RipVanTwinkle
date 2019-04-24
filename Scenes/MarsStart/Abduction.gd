@@ -28,3 +28,4 @@ func _on_abducted():
 func _on_LeaveArea_body_entered(body):
 	if ready:
 		get_tree().change_scene(Utils.MarsStart)
+

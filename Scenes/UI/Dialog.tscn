@@ -21,6 +21,7 @@ script = ExtResource( 1 )
 visible = true
 margin_right = 400.0
 margin_bottom = 300.0
+popup_exclusive = true
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/PopupDialog"]
 anchor_right = 1.0

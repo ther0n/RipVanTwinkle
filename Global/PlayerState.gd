@@ -22,6 +22,8 @@ func _ready():
 	# 5
 	scenes.append("res://Scenes/Cutscenes/Return.tscn")
 	# 6
+	scenes.append("res://Scenes/MarsEnd/Abduction.tscn")
+	# 7
 	scenes.append("res://Scenes/Cutscenes/TempEnd.tscn")
 
 

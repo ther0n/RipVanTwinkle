@@ -5,6 +5,9 @@ onready var dialogScene: PackedScene = preload("res://Scenes/UI/Dialog.tscn")
 var MarsStart: String = "res://Scenes/MarsStart/Mars.tscn"
 var ElonsMuskets: String = "res://Scenes/MarsStart/ElonsMuskets.tscn"
 var AbductionArea: String = "res://Scenes/MarsStart/Abduction.tscn"
+var MarsEnd: String = "res://Scenes/MarsEnd/Mars.tscn"
+var AbductionAreaEnd: String = "res://Scenes/MarsEnd/Abduction.tscn"
+var ElonsMusketsEnd: String = "res://Scenes/MarsEnd/ElonsMuskets.tscn"
 
 func _ready() -> void:
 	#OS.set_window_maximized(true)
